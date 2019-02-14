@@ -3,6 +3,8 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'dart:developer';
+
 
 
 
@@ -14,9 +16,9 @@ class SpringySliderController extends ChangeNotifier {
   );
 
   final SpringDescription crestSpring = SpringDescription(
-      mass: 1.0,
+      mass: 3.0,
       stiffness: 5.0,
-      damping: 0.5
+      damping: 0.2
   );
 
   final TickerProvider _vsync;
@@ -126,6 +128,7 @@ class SpringySliderController extends ChangeNotifier {
     final lastFrameTime = deltaTime.inMilliseconds.toDouble() / 1000.0;
     _springTime += lastFrameTime;
     _springingPercent = _sliderSpringSimulation.x(_springTime);
+    debugPrint('time: $_springTime');
 
     _crestSpringingPercent = _crestSpringSimulation.x(lastFrameTime);
     _crestSpringSimulation = new SpringSimulation(

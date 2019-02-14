@@ -157,6 +157,7 @@ class SliderClipper extends CustomClipper<Path> {
     compositePath.addPath(rightCurve, const Offset(0.0, 0.0));
 
     final leftCurve = Path();
+
     leftCurve.moveTo(troughPoint.x, troughPoint.y);
     leftCurve.quadraticBezierTo(
         troughPoint.x - controlPointWidth,

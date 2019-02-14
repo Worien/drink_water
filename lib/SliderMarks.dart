@@ -14,7 +14,9 @@ class SliderGoo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipPath(
+        clipBehavior: Clip.antiAlias,
         clipper: SliderClipper(
+
             sliderController: sliderController,
             paddingTop: paddingTop,
             paddingBottom: paddingBottom),
