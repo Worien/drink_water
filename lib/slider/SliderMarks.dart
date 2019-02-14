@@ -1,6 +1,6 @@
-import 'SpringySliderController.dart';
+import 'package:drink_water/slider/SpringySliderController.dart';
 import 'package:flutter/material.dart';
-import 'SliderClipper.dart';
+import 'package:drink_water/slider/SliderClipper.dart';
 
 class SliderGoo extends StatelessWidget {
   final Widget child;

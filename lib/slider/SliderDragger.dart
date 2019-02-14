@@ -1,4 +1,4 @@
-import 'SpringySliderController.dart';
+import 'package:drink_water/slider/SpringySliderController.dart';
 import 'package:flutter/material.dart';
 
 class SliderDragger extends StatefulWidget {

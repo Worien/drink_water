@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'SpringySlider.dart';
+import 'package:drink_water/slider/SpringySlider.dart';
+import 'calendar.dart';
 
 void main() => runApp(new MyApp());
 
@@ -26,8 +27,24 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          title: const Text(
+            'Drink Water',
+            style: TextStyle(color: Colors.white),
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.white, //change your color here
+          ),
+          backgroundColor: Colors.blue,
           elevation: 0.0,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.calendar_today,
+                color: Colors.white,
+              ),
+              onPressed: _openCalendarScreen,
+            )
+          ],
         ),
         body: Column(
           children: <Widget>[
@@ -35,28 +52,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Container(
                     child: SpringySlider(
                         markCount: 12,
-                        positiveColor: Theme
-                            .of(context)
-                            .primaryColor,
+                        positiveColor: Theme.of(context).primaryColor,
                         negativeColor:
-                        Theme
-                            .of(context)
-                            .scaffoldBackgroundColor)))
+                            Theme.of(context).scaffoldBackgroundColor)))
           ],
         ));
   }
+
+  void _openCalendarScreen() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => CalendarPage()),
+    );
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,8 @@
-import 'SpringySliderController.dart';
-import 'SliderPoints.dart';
+import 'package:drink_water/slider/SpringySliderController.dart';
+import 'package:drink_water/slider/SliderPoints.dart';
 import 'package:flutter/material.dart';
-import 'SliderMarks.dart';
-import 'SliderDragger.dart';
+import 'package:drink_water/slider/SliderMarks.dart';
+import 'package:drink_water/slider/SliderDragger.dart';
 
 
 
