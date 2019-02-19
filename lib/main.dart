@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
 import 'package:drink_water/slider/SpringySlider.dart';
 import 'calendar.dart';
+import 'dart:io' show Platform;
 
 void main() => runApp(new MyApp());
 
@@ -60,9 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _openCalendarScreen() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => CalendarPage()),
+    PageRoute route = Platform.isAndroid ? MaterialPageRoute(builder: (context) => CalendarPage()) : CupertinoPageRoute(builder: (context) => CalendarPage());
+      Navigator.push( context, route
     );
   }
 }

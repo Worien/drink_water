@@ -49,7 +49,12 @@ class SpringySliderController extends ChangeNotifier {
     if (_springTicker != null) {
       _springTicker.dispose();
     }
+
     super.dispose();
+  }
+
+  void saveWaterPercentForCurrentDay(){
+    
   }
 
   SpringySliderState get state => _state;

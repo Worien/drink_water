@@ -67,8 +67,8 @@ class Points extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final percent = points / 100;
-    final pointsTextSize = 50 + (50 * percent);
-
+    final pointsTextSize = 40 + (50 * percent);
+    final valueOfWater = (2000 * percent).round();
     return Row(
       crossAxisAlignment:
       isAboveTheSlider ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -76,7 +76,7 @@ class Points extends StatelessWidget {
         FractionalTranslation(
           translation: Offset(-0.05 * percent, isAboveTheSlider ? 0.18 : -0.18),
           child: Text(
-            '$points',
+            '$valueOfWater',
             style: TextStyle(fontSize: pointsTextSize, color: color),
           ),
         ),
@@ -91,7 +91,7 @@ class Points extends StatelessWidget {
                   bottom: 4.0,
                 ),
                 child: Text(
-                  'POINTS',
+                  'ML',
                   style: TextStyle(fontWeight: FontWeight.bold, color: color),
                 ),
               ),

@@ -27,7 +27,7 @@ class _SpringySliderState extends State<SpringySlider>
   @override
   void initState() {
     super.initState();
-    sliderController = SpringySliderController(sliderPercent: 0.5, vsync: this)
+    sliderController = SpringySliderController(sliderPercent: 0.05, vsync: this)
       ..addListener(() {
         setState(() {});
       });
